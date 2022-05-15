@@ -5,12 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weibo Inter URL Transfer</title>
     <link rel="icon" href="../images/avatar.png">
+
+    <style>
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .input-wrapper {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .input {
+            width: 100%;
+            -ms-box-sizing: border-box; /* ie8 */
+            -khtml-box-sizing: border-box; /* konqueror */
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+            box-sizing: border-box;         /* Opera/IE 8+ */
+            box-sizing: border-box; /* css3 rec */
+        }
+    </style>
 </head>
 <body>
-<div>
-    <input type="text" id="input" size="30" autofocus placeholder="Please paste your link here...">
+<div class="center">
+    <div class="input-wrapper">
+        <input type="text" id="input" class="input" autofocus placeholder="Please paste your link here...">
+    </div>
+    <div id="output"></div>
 </div>
-<div id="output"></div>
+
 <script type="text/javascript">
     const inputId = "input";
     const weiboIdKey = "weibo_id";
